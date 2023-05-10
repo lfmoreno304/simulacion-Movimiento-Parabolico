@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movimiento parabólico</title>
+    <style>
+      canvas {
+        width: 100%;
+        height: 500px;
+        border: 1px solid black;
+      }
+      form {
+        margin-bottom: 5px;
+      }
+      label {
+        padding: 3px;
+      }
+      input {
+        width: 50px;
+      }
+      #btn {
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <label for="gravedad">Gravedad:</label>
+      <input type="number" id="gravedad" value="9.81" onchange="data()"/>
+      <label for="">m/s</label>
+      <label for="Velocidad inicial">Velocidad inicial:</label>
+      <input type="number" value="90" id="velocidad" onchange="data()"/>
+      <label for="">m/s</label>
+      <label for="Angulo">Angulo:</label>
+      <input type="number" value="45" id="angulo" onchange="data()"/>
+      <label for="">°</label>
+      <input type="button" value="Simular" id="btn" onclick="draw()" />
+    </form>
+    <canvas id="canvas"></canvas>
+    <script src="movimiento-parabolico.js"></script>
+  </body>
+</html>
